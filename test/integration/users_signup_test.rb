@@ -13,5 +13,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
   assert_response :unprocessable_entity
   assert_template "users/new"
+  assert_not is_logged_in?
   end
 end
