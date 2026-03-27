@@ -268,7 +268,7 @@ GEM
       psych (>= 4.0.0)
       tsort
     regexp_parser (2.11.3)
-    reline (0.5.10)
+    reline (0.6.3)
       io-console (~> 0.5)
     repl_type_completor (0.1.10)
       prism (~> 1.0)
@@ -406,7 +406,7 @@ DEPENDENCIES
   puma (= 5.6.8)
   rails (= 7.0.4.3)
   rails-controller-testing (= 1.0.5)
-  reline (= 0.5.10)
+  reline (= 0.6.3)
   repl_type_completor (= 0.1.10)
   sassc-rails (= 2.1.2)
   selenium-webdriver (= 4.8.3)
