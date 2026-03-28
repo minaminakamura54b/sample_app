@@ -7,9 +7,11 @@ class SessionsController < ApplicationController
     #find->エラーが出る find_by-> エラーが出ない
     if user && user.authenticate(params[:session][:password])
       # &&はtruesだったら右側を実行、falseだったら実行しない
+      forwarding_url = session[:forwarding_url]
       reset_session
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       log_in user
-      redirect_to user
+      redirect_to forwarding_url || user
     else
       flash.now[:danger] = "Invalid email or password"
       render "new", status: :unprocessable_entity
@@ -17,7 +19,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url, status: :see_other
   end
 end
