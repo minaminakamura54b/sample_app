@@ -73,7 +73,7 @@ Rails.application.configure do
   # クラウドIDEの場合は以下をお使いください
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   ActionMailer::Base.smtp_settings = {
-    :port           => 587, # ← ここが原因
+    :port           => 2525, # ← ここが原因
     :address        => 'smtp.mailgun.org',
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
