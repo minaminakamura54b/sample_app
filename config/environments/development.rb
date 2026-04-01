@@ -69,7 +69,7 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'sample-app-gezi.onrender.com' # ここをコピペすると失敗します。自分の環境のホストに変えてください。
+  host = 'https://sample-app-gezi.onrender.com/' # ここをコピペすると失敗します。自分の環境のホストに変えてください。
   # クラウドIDEの場合は以下をお使いください
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   ActionMailer::Base.smtp_settings = {
@@ -79,7 +79,6 @@ Rails.application.configure do
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
     :domain         => "sandbox71042557be214572950aee1fb345be83.mailgun.org",
     :authentication => :plain,
-    :enable_starttls_auto => true
   }
   # localhostで開発している場合は以下をお使いください
   # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
