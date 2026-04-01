@@ -77,8 +77,9 @@ Rails.application.configure do
     :address        => 'smtp.mailgun.org',
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => "sandbox...mailgun.org",
+    :domain         => "sandbox71042557be214572950aee1fb345be83.mailgun.org",
     :authentication => :plain,
+    :enable_starttls_auto => true
   }
   # localhostで開発している場合は以下をお使いください
   # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
